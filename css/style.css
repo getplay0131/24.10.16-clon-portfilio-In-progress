@@ -549,3 +549,101 @@ h3.my-profession {
   text-align: justify;
   color: var(--text-black-700);
 }
+
+/* service section */
+.service .container {
+  padding-bottom: 10%;
+}
+.service .service-item {
+  margin-bottom: 30px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.service .service-item .service-item-inner {
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 30px 15px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.service .service-item .service-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.service .service-item .service-item-inner .icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.service .service-item .service-item-inner .icon .fa {
+  font-size: 40px;
+  line-height: 60px;
+  /* 글자에 그라디언트 적용하기 */
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 54.2%,
+    rgb(21, 186, 196) 100.3%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease-in-out;
+}
+
+.service .service-item .service-item-inner:hover .icon .fa {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 45px;
+}
+
+.service .service-item .service-item-inner h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.service .service-item .service-item-inner p {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 25px;
+  background: linear-gradient(
+    98.3deg,
+    rgb(0, 0, 0) 10.6%,
+    rgb(255, 0, 0) 97.7%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* portfolio section */
+.portfolio .portfolio-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.portfolio .portfolio-heading h2 {
+  /* color: var(--text-black-900); */
+  font-weight: 500;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* 보류 디자인 */
+.service .service-item .service-item-inner:hover .icon {
+  /* font-weight: 500;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: transparent;
+  -webkit-background-clip: text; */
+}
