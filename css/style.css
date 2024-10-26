@@ -627,9 +627,15 @@ h3.my-profession {
 }
 
 /* portfolio section */
+.portfolio .container {
+  padding-bottom: 40px;
+}
+
 .portfolio .portfolio-heading {
   flex: 0 0 100%;
   max-width: 100%;
+  margin-bottom: 40px;
+  font-size: 1.5rem;
 }
 
 .portfolio .portfolio-heading h2 {
@@ -638,6 +644,94 @@ h3.my-profession {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   color: transparent;
   -webkit-background-clip: text;
+}
+
+.portfolio .portfolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item-inner {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+  width: 100%;
+  display: block;
+}
+
+/* contact section */
+.contact .contact-title {
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact .contact-sub-title {
+  background: radial-gradient(
+    309px at 10% 24.3%,
+    rgb(17, 127, 238) 0%,
+    rgb(190, 47, 252) 90%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 60px;
+}
+
+.contact .contact-info-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+
+.contact .contact-info-item .icon {
+  display: inline-block;
+}
+
+.contact .contact-info-item .icon .fa {
+  font-size: 25px;
+  background: linear-gradient(
+    179.4deg,
+    rgb(12, 20, 69) -16.9%,
+    rgb(71, 30, 84) 119.9%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  text-transform: capitalize;
+  margin: 15px 0 5px;
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+  font-weight: 400;
 }
 
 /* 보류 디자인 */
