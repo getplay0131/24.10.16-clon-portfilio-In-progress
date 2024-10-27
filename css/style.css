@@ -715,7 +715,7 @@ h3.my-profession {
 
 .contact .contact-info-item h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 700; 
   background: radial-gradient(
     circle at 24.1% 68.8%,
     rgb(50, 50, 50) 0%,
