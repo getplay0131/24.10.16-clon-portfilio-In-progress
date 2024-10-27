@@ -7,6 +7,7 @@
  24.10.25 1:51:43 까지 진행[포트폴리오의 이미지를 a태그로 감싸 이미지 표현과 동시에 이동 기능 구현 필요]
  그동안 작업물 사진으로 본뜨기 > 완료
  24.10.26 2:04:15까지 진행
+ 24.10.27 2:16:00까지 진행 > contact섹션 완료
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +50,7 @@
             <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-comments"></i>Contact</a>
+            <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
           </li>
         </ul>
       </div>
@@ -58,7 +59,7 @@
       <!-- main-content 하단 -->
       <div class="main-content">
         <!-- home section 하단 -->
-        <section class="home_Section section hidden" id="home">
+        <section class="home_Section section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padding-15">
@@ -89,7 +90,7 @@
         <!-- home section 상단 -->
 
         <!-- about section 하단 -->
-        <section class="about section hidden" id="about">
+        <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title">
@@ -310,7 +311,7 @@
         <!-- about section 상단 -->
         <!-- service section 하단 -->
         <!-- 여기 부터 작업! 24.10.24~ -->
-        <section class="service section hidden" id="service">
+        <section class="service section" id="service">
           <div class="container">
             <div class="row">
               <div class="section-title padding-15">
@@ -419,7 +420,7 @@
         </section>
         <!-- service section 상단 -->
         <!-- portfolio section 하단 -->
-        <section class="portfolio section hidden" id="portfolio">
+        <section class="portfolio section" id="portfolio">
           <div class="row">
             <div class="section-title padding-15">
               <h2>Portfolio</h2>
@@ -506,7 +507,7 @@
         </section>
         <!-- portfolio section 상단 -->
         <!-- Contact section 하단 -->
-        <section class="contact section">
+        <section class="contact section" id="contact">
           <div class="container">
             <div class="row">
               <div class="section-title padding-15">
@@ -515,7 +516,7 @@
             </div>
           </div>
           <h3 class="contact-title">Have You Any Questions ?</h3>
-          <h4 class="contact-sub-title">I'M AT YOUR SERVICES</h4>
+          <h4 class="contact-sub-title padding-15">I'M AT YOUR SERVICES</h4>
           <div class="row">
             <!-- contact info item 하단 -->
             <div class="contact-info-item padding-15">
@@ -546,8 +547,67 @@
             </div>
             <!-- contact info item 상단 -->
           </div>
-          <h3 class="contact-title">Send me a message!</h3>
-          <h4 class="contact-sub-title">I'M at Your Services</h4>
+          <h3 class="contact-title padding-15">Send me a message!</h3>
+          <h4 class="contact-sub-title padding-15">I can help you.</h4>
+          <!-- Contact Form -->
+          <div class="row">
+            <div class="contact-form padding-15">
+              <div class="row">
+                <div class="form-item col-6 padding-15">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control"
+                      placeholder="Name"
+                    />
+                  </div>
+                </div>
+                <div class="form-item col-6 padding-15">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name=""
+                      id=""
+                      class="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padding-15">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control"
+                      placeholder="Subject"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padding-15">
+                  <div class="form-group">
+                    <textarea
+                      name=""
+                      id=""
+                      placeholder="Message"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padding-15">
+                  <button type="submit" class="btn">Send Message</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- Contact section 상단 -->
       </div>
