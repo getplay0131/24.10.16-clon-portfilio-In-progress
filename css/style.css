@@ -301,17 +301,19 @@ h3.my-profession {
 .home_Section .home-img {
   flex: 0 0 60%;
   max-width: 40%;
-  /* background: #f00; */
+  height: 100%;
   text-align: center;
   position: relative;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .home_Section .home-img img {
   height: 400px;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
-  background-color: #f00;
+  box-shadow: 2px 2px 2px 2px #302e4d;
 }
 
 .home-img::after {
@@ -352,6 +354,7 @@ h3.my-profession {
 #myWebsite {
   text-decoration: none;
   font-size: 1.2rem;
+  color: var(--text-black-700);
 }
 
 .about .about-content .about-text {
@@ -422,8 +425,10 @@ h3.my-profession {
 .about .about-content .skills .skill-item {
   flex: 0 0 100%;
   max-width: 100%;
-  background-color: #f00;
   margin-bottom: 25px;
+  /* background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+  border: none;
+  border-radius: 10px;
 }
 
 .about .about-content .skills .skill-item h5 {
@@ -435,7 +440,7 @@ h3.my-profession {
 }
 
 .about .about-content .skills .skill-item .progress {
-  background-color: var(--text-black-700);
+  background-color: rgba(48, 46, 77, 0.15);
   height: 7px;
   border-radius: 4px;
   width: 100%;
@@ -450,6 +455,10 @@ h3.my-profession {
   border-radius: 4px;
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  box-shadow: 3px 3px 3px #ddd;
+  -webkit-animation: color-change-2x 1.5s linear infinite alternate both;
+  animation: color-change-2x 1.5s linear infinite alternate both;
+  transform: translateY(0);
 }
 
 .about .about-content .skills .skill-item .skill-percent {
@@ -548,6 +557,15 @@ h3.my-profession {
   font-size: 16px;
   text-align: justify;
   color: var(--text-black-700);
+}
+
+.about .about-text h3,
+.about .about-text span,
+.about .about-text p,
+.about .personal-info .info-item p,
+.about .personal-info .info-item span,
+.about .personal-info .info-item a {
+  font-size: 1.8rem;
 }
 
 /* service section */
@@ -777,6 +795,108 @@ h3.my-profession {
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
+}
+
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+  }
+  .main-content {
+    padding-left: 0;
+  }
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+  .home-info .hello,
+  .home-info .name,
+  .home-info .my-profession,
+  .home-info .typing,
+  .home-info p,
+  .hire-me {
+    font-size: 1.8rem;
+  }
+  .about .about-content .personal-info .info-item p,
+  #myWebsite {
+    font-size: 1.5rem;
+  }
+
+  /* 여기부터 작업 */
+  .about-content .about-text > h3,
+  .about-content .about-text span,
+  .about-content .about-text p {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .about .about-content .education,
+  .about .about-content .experience,
+  .home_Section .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home_Section .home-img {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .home_Section .home-img {
+    /* opacity: 1; */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(10%);
+    flex: 0 0 50%;
+  }
+
+  .main-container {
+    padding: 10px;
+  }
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item,
+  .about .about-content .education,
+  .about .about-content .experience,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #8ec5fc;
+    transform: translateY(-1.5px);
+  }
+  100% {
+    background: #e0c3fc;
+    transform: translateY(-0.5px);
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #8ec5fc;
+    transform: translateY(-1.5px);
+  }
+  100% {
+    background: #e0c3fc;
+    transform: translateY(-0.5px);
+  }
 }
 
 /* 보류 디자인 */
