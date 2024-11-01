@@ -66,7 +66,6 @@ ul {
   max-width: 1100px;
   width: 100%;
   margin: auto;
-  /* background-color: #f00; */
 }
 
 .section .container {
@@ -78,7 +77,6 @@ ul {
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 60px;
-  /* background-color: #f00; */
 }
 
 .section-title h2 {
@@ -92,7 +90,7 @@ ul {
   content: "";
   height: 4px;
   width: 50px;
-  background-color: var(--skin-color1);
+  background-color: var(--skin-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -102,7 +100,7 @@ ul {
   content: "";
   height: 4px;
   width: 25px;
-  background-color: var(--skin-color1);
+  background-color: var(--skin-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -123,7 +121,7 @@ ul {
   padding: 12px 35px;
   color: #fff;
   border-radius: 40px;
-  background-color: var(--skin-color1);
+  background-color: var(--skin-color);
   display: inline-block;
   white-space: nowrap;
   transition: all 0.5s ease-in-out;
@@ -180,8 +178,8 @@ ul {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-bottom: 5px solid var(--skin-color1);
-  border-left: 5px solid var(--skin-color1);
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
   bottom: 0;
   left: 0;
 }
@@ -204,7 +202,7 @@ ul {
 .aside .nav-toggler span {
   height: 2px;
   width: 18px;
-  background: var(--skin-color1);
+  background: var(--skin-color);
   display: inline-block;
   position: relative;
 }
@@ -213,7 +211,7 @@ ul {
   content: "";
   height: 2px;
   width: 18px;
-  background: var(--skin-color1);
+  background: var(--skin-color);
   position: absolute;
   top: -6px;
   left: 0;
@@ -223,7 +221,7 @@ ul {
   content: "";
   height: 2px;
   width: 18px;
-  background: var(--skin-color1);
+  background: var(--skin-color);
   position: absolute;
   top: 6px;
   left: 0;
@@ -234,8 +232,8 @@ ul {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-top: 5px solid var(--skin-color1);
-  border-right: 5px solid var(--skin-color1);
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
   top: 0;
   right: 0;
 }
@@ -259,7 +257,7 @@ ul {
 }
 
 .aside .nav li a.active {
-  color: var(--skin-color1);
+  color: var(--skin-color);
 }
 
 .aside .nav li a i {
@@ -287,9 +285,10 @@ h3.hello span {
   font-family: "Song Myung", serif;
   font-size: 30px;
   font-weight: 700;
-  background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
+  color: var(--skin-color);
+  /* background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 h3.my-profession {
@@ -298,9 +297,10 @@ h3.my-profession {
 }
 
 .typing {
-  background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
+  color: var(--skin-color);
+  /* background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 .home_Section .home-img {
   flex: 0 0 60%;
@@ -327,8 +327,8 @@ h3.my-profession {
   width: 80px;
   right: 5px;
   bottom: -20px;
-  border-bottom: 10px solid var(--skin-color1);
-  border-right: 10px solid var(--skin-color1);
+  border-bottom: 10px solid var(--skin-color);
+  border-right: 10px solid var(--skin-color);
 }
 
 .home-img::before {
@@ -338,8 +338,8 @@ h3.my-profession {
   width: 80px;
   left: 5px;
   top: -20px;
-  border-top: 10px solid var(--skin-color1);
-  border-left: 10px solid var(--skin-color1);
+  border-top: 10px solid var(--skin-color);
+  border-left: 10px solid var(--skin-color);
 }
 
 .home-info p {
@@ -375,9 +375,11 @@ h3.my-profession {
 }
 
 .about .about-content .about-text h3 span {
-  background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
+  color: var(
+    --skin-color
+  ); /* background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 .about .about-content .about-text p {
@@ -441,7 +443,7 @@ h3.my-profession {
   line-height: 40px;
   font-weight: 600;
   font-size: 16px;
-  color: var(--text-black-900);
+  color: var(--skin-color);
   text-transform: capitalize;
 }
 
@@ -526,7 +528,7 @@ h3.my-profession {
   height: 100%;
   left: 7px;
   top: 0;
-  background-color: var(--skin-color1);
+  background-color: var(--skin-color);
 }
 
 .about .about-content .timeline .circle-dot {
@@ -536,7 +538,7 @@ h3.my-profession {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: var(--skin-color1);
+  background-color: var(--skin-color);
 }
 
 .about .about-content .timeline .timeline-date {
@@ -610,31 +612,34 @@ h3.my-profession {
 .service .service-item .service-item-inner .icon .fa {
   font-size: 40px;
   line-height: 60px;
+  color: var(--skin-color);
   /* 글자에 그라디언트 적용하기 */
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle at 10% 20%,
     rgb(253, 239, 132) 0%,
     rgb(247, 198, 169) 54.2%,
     rgb(21, 186, 196) 100.3%
   );
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   transition: all 0.5s ease-in-out;
 }
 
 .service .service-item .service-item-inner:hover .icon .fa {
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: var(--skin-color);
+  /* background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   font-size: 45px;
 }
 
 .service .service-item .service-item-inner h4 {
   font-size: 18px;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, rgb(55, 65, 81), rgb(156, 163, 175));
+  color: var(--skin-color);
+  /* background: linear-gradient(135deg, rgb(55, 65, 81), rgb(156, 163, 175));
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -643,13 +648,14 @@ h3.my-profession {
   font-size: 16px;
   text-align: justify;
   line-height: 25px;
-  background: linear-gradient(
+  color: var(--skin-color);
+  /* background: linear-gradient(
     98.3deg,
     rgb(0, 0, 0) 10.6%,
     rgb(255, 0, 0) 97.7%
   );
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 /* portfolio section */
@@ -667,9 +673,10 @@ h3.my-profession {
 .portfolio .portfolio-heading h2 {
   /* color: var(--text-black-900); */
   font-weight: 500;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: var(--skin-color);
+  /* background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 .portfolio .portfolio-item {
@@ -693,26 +700,28 @@ h3.my-profession {
 
 /* contact section */
 .contact .contact-title {
-  background: radial-gradient(
+  color: var(--skin-color);
+  /* background: radial-gradient(
     circle at 12.3% 19.3%,
     rgb(85, 88, 218) 0%,
     rgb(95, 209, 249) 100.2%
   );
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 .contact .contact-sub-title {
-  background: radial-gradient(
+  color: var(--skin-color);
+  /* background: radial-gradient(
     309px at 10% 24.3%,
     rgb(17, 127, 238) 0%,
     rgb(190, 47, 252) 90%
   );
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   text-align: center;
   font-size: 1.25rem;
   margin-bottom: 60px;
@@ -743,13 +752,14 @@ h3.my-profession {
 .contact .contact-info-item h4 {
   font-size: 18px;
   font-weight: 700;
-  background: radial-gradient(
+  color: var(--skin-color);
+  /* background: radial-gradient(
     circle at 24.1% 68.8%,
     rgb(50, 50, 50) 0%,
     rgb(0, 0, 0) 99.4%
   );
   color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   text-transform: capitalize;
   margin: 15px 0 5px;
 }
