@@ -28,6 +28,10 @@
   border-radius: 50%;
 }
 
+.style-switcher i {
+  transition: all 0.5s ease-in-out;
+}
+
 .style-switcher .s-icon i {
   line-height: 40px;
 }
@@ -72,7 +76,7 @@
 }
 
 .style-switcher .color-2 {
-  background: rgb(31, 41, 55);
+  background: rgb(249, 115, 22);
   transition: all 0.5s ease-in-out;
 }
 .style-switcher .color-3 {
