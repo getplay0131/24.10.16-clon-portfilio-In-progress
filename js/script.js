@@ -36,35 +36,53 @@ let typePortfolio = new Typed(".typingPortfolio", {
   fadeOutDelay: 500, // 페이드아웃 지연 시간
 });
 
-// 네비게이션 버튼 클릭시 동작 및 스크롤 하단
-const navBtn = document.querySelectorAll(".nav li a");
-
-navBtn.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault(); // 기본 동작 막기
-
-    // 클릭한 링크의 href 값에서 # 제거하여 id 얻기
-    const targetId = link.getAttribute("href").substring(1);
-
-    // id로 해당 섹션 찾기
-    const targetSection = document.getElementById(targetId);
-
-    // 부드러운 스크롤 옵션 설정
-    const scrollOptions = {
-      behavior: "smooth", // 부드러운 스크롤
-      block: "start", // 섹션의 시작 부분으로 스크롤
-    };
-
-    // 해당 섹션으로 스크롤
-    targetSection.scrollIntoView(scrollOptions);
-
-    // active 클래스 관리
-    navBtn.forEach((navLink) => {
-      navLink.classList.remove("active"); // 모든 링크에서 active 제거
-    });
-    link.classList.add("active"); // 클릭한 링크에만 active 추가
+// ============================= nav animation
+const nav = document.querySelector(".nav"),
+  navList = nav.querySelectorAll("li"),
+  totalNavList = navList.length;
+for (let i = 0; i < totalNavList; i++) {
+  const a = navList[i].querySelector("a");
+  a.addEventListener("click", function () {
+    for (let j = 0; j < totalNavList; j++) {
+      navList[j].querySelector("a").classList.remove("active");
+    }
+    this.classList.add("active");
+    showSection(this);
   });
-});
+}
+
+function showSection(element) {
+  console.log(element.getAttribute("href").split("#"));
+}
+// 네비게이션 버튼 클릭시 동작 및 스크롤 하단
+// const navBtn = document.querySelectorAll(".nav li a");
+
+// navBtn.forEach((link) => {
+//   link.addEventListener("click", (e) => {
+//     e.preventDefault(); // 기본 동작 막기
+
+//     // 클릭한 링크의 href 값에서 # 제거하여 id 얻기
+//     const targetId = link.getAttribute("href").substring(1);
+
+//     // id로 해당 섹션 찾기
+//     const targetSection = document.getElementById(targetId);
+
+//     // 부드러운 스크롤 옵션 설정
+//     const scrollOptions = {
+//       behavior: "smooth", // 부드러운 스크롤
+//       block: "start", // 섹션의 시작 부분으로 스크롤
+//     };
+
+//     // 해당 섹션으로 스크롤
+//     targetSection.scrollIntoView(scrollOptions);
+
+//     // active 클래스 관리
+//     navBtn.forEach((navLink) => {
+//       navLink.classList.remove("active"); // 모든 링크에서 active 제거
+//     });
+//     link.classList.add("active"); // 클릭한 링크에만 active 추가
+//   });
+// });
 // 네비게이션 버튼 클릭시 동작 및 스크롤 하단
 
 // 부드러운 이동
