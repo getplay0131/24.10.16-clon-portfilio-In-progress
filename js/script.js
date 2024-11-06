@@ -5,7 +5,6 @@ let typed = new Typed(".typing", {
     "2024년도에 공부를 시작하였습니다.",
     "현재는 백엔드 자바 기초를 공부 중입니다.",
     "다정하고 헌신적인 어머니와 같이 거주 중입니다.",
-    "My Last Projects : ",
   ],
   typeSpeed: 100,
   backSpeed: 60,
@@ -39,7 +38,9 @@ let typePortfolio = new Typed(".typingPortfolio", {
 // ============================= nav animation
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
-  totalNavList = navList.length;
+  totalNavList = navList.length,
+  allSection = document.querySelectorAll(".section"),
+  totalSection = allSection.length;
 for (let i = 0; i < totalNavList; i++) {
   const a = navList[i].querySelector("a");
   a.addEventListener("click", function () {
@@ -52,7 +53,11 @@ for (let i = 0; i < totalNavList; i++) {
 }
 
 function showSection(element) {
-  console.log(element.getAttribute("href").split("#"));
+  for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.remove("active");
+  }
+  const target = element.getAttribute("href").split("#")[1];
+  document.querySelector("#" + target).classList.add("active");
 }
 // 네비게이션 버튼 클릭시 동작 및 스크롤 하단
 // const navBtn = document.querySelectorAll(".nav li a");
