@@ -67,6 +67,11 @@ ul {
 .section.active {
   z-index: 2;
   opacity: 1;
+  animation: slideSection 5s ease-in-out;
+}
+
+.section.back-section {
+  z-index: 1;
 }
 
 .hidden {
@@ -169,6 +174,7 @@ ul {
   align-items: center;
   z-index: 10;
   border-right: 1px solid var(--bg-black-50);
+  transition: all 0.5s ease-in-out;
 }
 
 .aside .logo {
@@ -274,6 +280,11 @@ ul {
   color: var(--text-black-900);
   padding: 5px 15px;
   border-bottom: 1px solid var(--bg-black-50);
+  transition: all 0.5s ease-in-out;
+}
+
+.aside .nav li:hover {
+  text-shadow: 0px 2px 2px var(--skin-color);
 }
 
 .aside .nav li a.active {
@@ -629,6 +640,10 @@ h3.my-profession {
   transition: all 0.5s ease-in-out;
 }
 
+/* TODO : 서비스 아이콘 호버 작업하기 */
+/* .service .service-item .service-item-inner .icon .fa:hover {
+} */
+
 .service .service-item .service-item-inner .icon .fa {
   font-size: 40px;
   line-height: 60px;
@@ -845,6 +860,28 @@ h3.my-profession {
   .aside {
     left: -270px;
   }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
+  }
+
+  .aside .nav-toggler.open {
+    left: 300px;
+  }
+
+  .section {
+    left: 0;
+  }
+
+  .section.open {
+    left: 270px;
+  }
+
   .main-content {
     padding-left: 0;
   }
@@ -922,6 +959,7 @@ h3.my-profession {
   }
 }
 
+/* animation under */
 @-webkit-keyframes color-change-2x {
   0% {
     background: #8ec5fc;
@@ -942,6 +980,18 @@ h3.my-profession {
     transform: translateY(-0.5px);
   }
 }
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/* animation top */
 
 /* 보류 디자인 */
 .service .service-item .service-item-inner:hover .icon {
