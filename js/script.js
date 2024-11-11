@@ -44,18 +44,29 @@ const nav = document.querySelector(".nav"),
 for (let i = 0; i < totalSection; i++) {
   const a = navList[i].querySelector("a");
   a.addEventListener("click", function () {
-    for (let i = 0; i < totalSection; i++) {
-      allSection[i].classList.remove("back-section");
-    }
+    removeBackSection();
     for (let j = 0; j < totalNavList; j++) {
       if (navList[j].querySelector("a").classList.contains("active")) {
-        allSection[j].classList.add("back-section");
+        addBackSection(j);
       }
       navList[j].querySelector("a").classList.remove("active");
     }
     this.classList.add("active");
     showSection(this);
+    if (window.innerWidth < 1200) {
+      asideSectionTogglerBtn();
+    }
   });
+}
+
+function removeBackSection() {
+  for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.remove("back-section");
+  }
+}
+
+function addBackSection(num) {
+  allSection[num].classList.add("back-section");
 }
 
 function showSection(element) {
@@ -66,7 +77,30 @@ function showSection(element) {
   document.querySelector("#" + target).classList.add("active");
 }
 
+function updateNav(element) {
+  for (let i = 0; i < totalNavList; i++) {
+    navList[i].querySelector("a").classList.remove("active");
+    const target = element.getAttribute("href").split("#")[1];
+    if (
+      target ===
+      navList[i].querySelector("a").getAttribute("href").split("#")[1]
+    ) {
+      navList[i].querySelector("a").classList.add("active");
+    }
+  }
+}
+
+document.querySelector(".hire-me").addEventListener("click", function () {
+  const sectionIndex = this.getAttribute("data-section-index");
+  // console.log(sectionIndex);
+  showSection(this);
+  updateNav(this);
+  removeBackSection();
+  addBackSection(sectionIndex);
+});
+
 const navTogglerBtn = document.querySelector(".nav-toggler"),
+  navMenuBtn = navTogglerBtn.querySelector("span i"),
   aside = document.querySelector(".aside");
 navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBtn();
@@ -75,85 +109,14 @@ navTogglerBtn.addEventListener("click", () => {
 function asideSectionTogglerBtn() {
   aside.classList.toggle("open");
   navTogglerBtn.classList.toggle("open");
+  if (navTogglerBtn.classList.contains("open")) {
+    navMenuBtn.classList.remove("fa-burger");
+    navMenuBtn.classList.add("fa-circle-xmark");
+  } else {
+    navMenuBtn.classList.remove("fa-circle-xmark");
+    navMenuBtn.classList.add("fa-burger");
+  }
   for (let i = 0; i < totalSection; i++) {
     allSection[i].classList.toggle("open");
   }
 }
-// 네비게이션 버튼 클릭시 동작 및 스크롤 하단
-// const navBtn = document.querySelectorAll(".nav li a");
-
-// navBtn.forEach((link) => {
-//   link.addEventListener("click", (e) => {
-//     e.preventDefault(); // 기본 동작 막기
-
-//     // 클릭한 링크의 href 값에서 # 제거하여 id 얻기
-//     const targetId = link.getAttribute("href").substring(1);
-
-//     // id로 해당 섹션 찾기
-//     const targetSection = document.getElementById(targetId);
-
-//     // 부드러운 스크롤 옵션 설정
-//     const scrollOptions = {
-//       behavior: "smooth", // 부드러운 스크롤
-//       block: "start", // 섹션의 시작 부분으로 스크롤
-//     };
-
-//     // 해당 섹션으로 스크롤
-//     targetSection.scrollIntoView(scrollOptions);
-
-//     // active 클래스 관리
-//     navBtn.forEach((navLink) => {
-//       navLink.classList.remove("active"); // 모든 링크에서 active 제거
-//     });
-//     link.classList.add("active"); // 클릭한 링크에만 active 추가
-//   });
-// });
-// 네비게이션 버튼 클릭시 동작 및 스크롤 하단
-
-// 부드러운 이동
-// 다만 내가 이해하기엔 다소 어려움[24.11.01]
-// const navBtn = document.querySelectorAll(".nav li a");
-
-// function smoothScroll(target, duration) {
-//   const targetPosition =
-//     target.getBoundingClientRect().top + window.pageYOffset;
-//   const startPosition = window.pageYOffset;
-//   const distance = targetPosition - startPosition;
-//   let startTime = null;
-
-//   function animation(currentTime) {
-//     if (startTime === null) startTime = currentTime;
-//     const timeElapsed = currentTime - startTime;
-//     const run = ease(timeElapsed, startPosition, distance, duration);
-//     window.scrollTo(0, run);
-//     if (timeElapsed < duration) requestAnimationFrame(animation);
-//   }
-
-//   // 이징 함수 - easeInOutQuad
-//   function ease(t, b, c, d) {
-//     t /= d / 2;
-//     if (t < 1) return (c / 2) * t * t + b;
-//     t--;
-//     return (-c / 2) * (t * (t - 2) - 1) + b;
-//   }
-
-//   requestAnimationFrame(animation);
-// }
-
-// navBtn.forEach((link) => {
-//   link.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const targetId = link.getAttribute("href").substring(1);
-//     const targetSection = document.getElementById(targetId);
-
-//     if (targetSection) {
-//       // 1000ms(1초) 동안 스크롤 애니메이션 실행
-//       smoothScroll(targetSection, 1000);
-//     }
-
-//     navBtn.forEach((links) => {
-//       links.classList.remove("active");
-//     });
-//     link.classList.add("active");
-//   });
-// });
