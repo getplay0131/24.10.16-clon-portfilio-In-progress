@@ -120,3 +120,16 @@ function asideSectionTogglerBtn() {
     allSection[i].classList.toggle("open");
   }
 }
+
+// 로고 클릭시 홈 섹션으로 이동
+const logoLink = document.querySelector(".logo a");
+
+logoLink.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // alert(logoLink);
+  const homeSection = document.querySelector("#home");
+  homeSection.scrollIntoView({ behavior: "smooth" });
+
+  updateNav(this);
+});

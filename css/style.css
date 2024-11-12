@@ -7,7 +7,7 @@
   --bg-black-900: #f2f2fc;
   --bg-black-100: #fcf9ff;
   --bg-black-50: #e8dfec;
-  --text-black-900: #302e4d;
+  --text-black-900: #36454f;
   --text-black-700: #504e70;
 }
 
@@ -107,7 +107,16 @@ ul {
 
 .section-title h2 {
   font-size: 40px;
-  color: var(--text-black-900);
+  /* color: var(--skin-color);
+   */
+  background-image: linear-gradient(
+    90.5deg,
+    rgba(152, 45, 255, 1) 0.7%,
+    rgba(90, 241, 255, 1) 51.5%,
+    rgba(65, 239, 164, 1) 100.6%
+  );
+  color: transparent;
+  background-clip: text;
   font-weight: 700;
   position: relative;
 }
@@ -142,15 +151,13 @@ ul {
 }
 
 .btn {
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 500;
   padding: 12px 35px;
-  /* background: linear-gradient(135deg, rgb(30, 58, 138), rgb(96, 165, 250));
-  color: transparent;
-  -webkit-background-clip: text; */
-  color: var(--text-black-900);
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: var(--skin-color);
   border-radius: 40px;
-  background-color: var(--skin-color);
+  /* background-color: var(--skin-color); */
   display: inline-block;
   white-space: nowrap;
   transition: all 0.5s ease-in-out;
@@ -202,6 +209,14 @@ ul {
 .aside .logo a span {
   font-family: "Bebas Neue", sans-serif;
   font-size: 40px;
+  background: linear-gradient(
+    96.2deg,
+    rgb(255, 230, 112) 10.4%,
+    rgb(255, 100, 100) 43.8%,
+    rgb(0, 93, 219) 105.8%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .aside .logo a::before {
@@ -286,7 +301,14 @@ ul {
   font-size: 16px;
   font-weight: 600;
   display: block;
-  color: var(--text-black-900);
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 0, 0) 11.2%,
+    rgb(11, 132, 145) 91.1%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  /* color: var(--text-black-900); */
   padding: 5px 15px;
   border-bottom: 1px solid var(--bg-black-50);
   transition: all 0.5s ease-in-out;
@@ -420,8 +442,10 @@ h3.my-profession {
 }
 
 .about .about-content .about-text p {
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 25px;
+  letter-spacing: 5px;
+  text-align: justify;
   color: var(--text-black-700);
 }
 
@@ -805,10 +829,11 @@ h3.my-profession {
   margin: 15px 0 5px;
 }
 
-/* .info-item-heading {
+/* .info-item-heading:not(span) {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   color: transparent;
   -webkit-background-clip: text;
+  border: 1px solid #000;
 } */
 
 .contact .contact-info-item p {
